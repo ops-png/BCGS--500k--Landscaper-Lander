@@ -6,22 +6,22 @@ const ProcessSection: React.FC = () => {
     {
       step: '01',
       title: 'Check Your Availability',
-      desc: "Complete the 60-second survey below. We only work with one landscaping company per area - we'll confirm whether your market is still open."
+      desc: "Complete the 60-second form below. We only work with one landscaping company per area — we'll confirm whether your market is still open."
     },
     {
       step: '02',
       title: 'Free Growth Consultation',
-      desc: "If your area qualifies, you'll book a 45-minute strategy call where we break down exactly how we'd generate leads in your specific market."
+      desc: "If your area qualifies, you'll book a free strategy call where we break down exactly how we'd generate qualified leads in your specific market."
     },
     {
       step: '03',
-      title: 'We Build Your System',
-      desc: "Custom ad campaigns, landing pages, automated follow-up, and a CRM built specifically for your service area - done for you, start to finish."
+      title: 'We Build and Launch Your Facebook Ads',
+      desc: "We create your full ad campaign and lead filter — targeting homeowners in your area with real budgets. Done-for-you. Ads live within 7 days."
     },
     {
       step: '04',
-      title: 'Launch & Scale',
-      desc: "Ads go live, leads start flowing into your pipeline, and you focus on closing jobs - not chasing them."
+      title: 'Qualified Leads Hit Your Phone',
+      desc: "Homeowners who pass the budget filter start booking estimates. You focus on closing high-ticket jobs — not chasing people who were never going to buy."
     }
   ];
 
