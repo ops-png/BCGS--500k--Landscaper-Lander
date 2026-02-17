@@ -10,19 +10,18 @@ const Hero: React.FC = () => {
       </div>
 
       <h2 className="text-[#C9A24D] text-xs md:text-base font-black tracking-[0.3em] md:tracking-[0.4em] uppercase mb-3 md:mb-5 text-glow">
-        Attention Landscapers
+        Landscapers Doing $500,000+ a Year
       </h2>
       
-      <h1 className="text-2xl md:text-5xl font-black leading-[1.2] mb-6 md:mb-10 tracking-tight text-white">
-        Discover <br />
-        The Marketing System <br />
-        That Scaled a Landscaping <br />
-        Business to <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#F5F7FA] to-[#C9A24D] inline-block pt-1">Six Figures</span> <br />
-        in 4 Months
+      <h1 className="text-2xl md:text-5xl font-black leading-[1.2] mb-4 md:mb-6 tracking-tight text-white">
+        Stop Paying Google to Send You <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#F5F7FA] to-[#C9A24D] inline-block pt-1">Tire Kickers.</span> Use This Instead.
       </h1>
+      <p className="text-sm md:text-xl text-[#F5F7FA]/50 max-w-3xl mx-auto mb-6 md:mb-10 font-light leading-relaxed italic">
+        (The Facebook Filter System That Scaled our Landscaping Business past 6 Figures — Without a Single Google Ad)
+      </p>
       
       <p className="text-base md:text-2xl text-[#F5F7FA]/70 max-w-4xl mx-auto mb-10 md:mb-16 font-light leading-relaxed">
-        Watch the 2-minute breakdown below - then see if your area is still available for a free growth consultation.
+        Only qualified homeowners with budget reach your phone — no tire kickers, no wasted walkthroughs, no more donating your time/money to Google. (Done-For-You)
       </p>
 
       {/* Video Section with Integrated Instruction Bar */}
