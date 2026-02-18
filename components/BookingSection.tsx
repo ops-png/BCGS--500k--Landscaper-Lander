@@ -1,7 +1,18 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const BookingSection: React.FC = () => {
+  useEffect(() => {
+    const scriptId = 'ghl-form-embed';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://link.msgsndr.com/js/form_embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <section id="booking-section" className="py-8 md:py-16 px-5 max-w-5xl mx-auto">
       {/* Booking Header */}
@@ -20,18 +31,18 @@ const BookingSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Survey Integration - Smaller and centered to avoid "bulky" look */}
+      {/* Survey Integration */}
       <div className="max-w-3xl mx-auto">
         <div className="relative glass-card rounded-2xl md:rounded-3xl p-1 border-[#203159]/50 shadow-2xl overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C9A24D]/30 to-transparent"></div>
-          <div className="w-full bg-[#111827]/40 rounded-[1.2rem] md:rounded-[1.4rem] min-h-[500px] overflow-hidden">
-             <iframe 
-              src="https://api.leadconnectorhq.com/widget/form/vmCL2RAqnhJNm1dc6iq1" 
-              style={{ width: '100%', border: 'none', minHeight: '600px' }} 
-              scrolling="no" 
-              id="vmCL2RAqnhJNm1dc6iq1"
-              title="form"
-             ></iframe>
+          <div className="w-full bg-[#111827]/40 rounded-[1.2rem] md:rounded-[1.4rem] overflow-hidden">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/survey/jOqn0uSwDmE3trd8Q2uu"
+              style={{ border: 'none', width: '100%' }}
+              scrolling="no"
+              id="jOqn0uSwDmE3trd8Q2uu"
+              title="survey"
+            ></iframe>
           </div>
         </div>
       </div>
