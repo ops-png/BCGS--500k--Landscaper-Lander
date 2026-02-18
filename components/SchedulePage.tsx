@@ -7,6 +7,7 @@ const TOTAL_SECONDS = 5 * 60;
 const SchedulePage: React.FC = () => {
   const [secondsLeft, setSecondsLeft] = useState(TOTAL_SECONDS);
   const calendarRef = useRef<HTMLDivElement>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     if (secondsLeft <= 0) return;
@@ -15,6 +16,33 @@ const SchedulePage: React.FC = () => {
     }, 1000);
     return () => clearInterval(id);
   }, [secondsLeft]);
+
+  // Inject GHL form_embed.js and listen for iframe resize postMessages
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://link.msgsndr.com/js/form_embed.js';
+    script.type = 'text/javascript';
+    script.async = true;
+    document.body.appendChild(script);
+
+    const handleMessage = (e: MessageEvent) => {
+      if (!iframeRef.current) return;
+      // GHL sends { type: 'setHeight', value: N } or { height: N }
+      const data = e.data;
+      if (typeof data === 'object' && data !== null) {
+        const h = data.value ?? data.height ?? data.iframeHeight;
+        if (typeof h === 'number' && h > 100) {
+          iframeRef.current.style.height = `${h}px`;
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => {
+      window.removeEventListener('message', handleMessage);
+      if (document.body.contains(script)) document.body.removeChild(script);
+    };
+  }, []);
 
   const minutes = Math.floor(secondsLeft / 60);
   const seconds = secondsLeft % 60;
@@ -132,14 +160,14 @@ const SchedulePage: React.FC = () => {
         <section ref={calendarRef} className="px-5 pb-10 md:pb-16 max-w-3xl mx-auto">
           <div className="glass-card rounded-xl md:rounded-2xl border border-[#C9A24D]/20 overflow-hidden">
             <iframe
+              ref={iframeRef}
               src="https://api.leadconnectorhq.com/widget/booking/Z1zXT3EvlOEu3hxLfPSP"
-              style={{ width: '100%', border: 'none', display: 'block', minHeight: '700px' }}
+              style={{ width: '100%', border: 'none', display: 'block', height: '900px' }}
               scrolling="no"
               id="Z1zXT3EvlOEu3hxLfPSP_1771387328348"
               title="Book a System Overview Call"
             ></iframe>
           </div>
-          <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
         </section>
 
         {/* ── WHAT HAPPENS ON THIS CALL ── */}
