@@ -47,7 +47,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/schedule" element={<SchedulePage />} />
-        <Route path="/confirmed-upmarket" element={<ConfirmedUpmarketPage />} />
+        <Route path="/confirmed" element={<ConfirmedUpmarketPage />} />
       </Routes>
     </BrowserRouter>
   );
