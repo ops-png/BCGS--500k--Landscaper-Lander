@@ -17,17 +17,24 @@ const SchedulePage: React.FC = () => {
     return () => clearInterval(id);
   }, [secondsLeft]);
 
-  // Inject GHL form_embed.js and listen for iframe resize postMessages
+  // Inject GHL form_embed.js and listen for iframe resize postMessages.
+  // Always remove any stale instance first so the script re-runs and
+  // finds the booking calendar iframe on every mount.
   useEffect(() => {
+    const SCRIPT_ID = 'ghl-form-embed';
+
+    // Remove any previous copy (left over from landing page or a prior visit)
+    const existing = document.getElementById(SCRIPT_ID);
+    if (existing) existing.parentNode?.removeChild(existing);
+
     const script = document.createElement('script');
+    script.id = SCRIPT_ID;
     script.src = 'https://link.msgsndr.com/js/form_embed.js';
     script.type = 'text/javascript';
-    script.async = true;
     document.body.appendChild(script);
 
     const handleMessage = (e: MessageEvent) => {
       if (!iframeRef.current) return;
-      // GHL sends { type: 'setHeight', value: N } or { height: N }
       const data = e.data;
       if (typeof data === 'object' && data !== null) {
         const h = data.value ?? data.height ?? data.iframeHeight;
@@ -40,7 +47,8 @@ const SchedulePage: React.FC = () => {
     window.addEventListener('message', handleMessage);
     return () => {
       window.removeEventListener('message', handleMessage);
-      if (document.body.contains(script)) document.body.removeChild(script);
+      const s = document.getElementById(SCRIPT_ID);
+      if (s) s.parentNode?.removeChild(s);
     };
   }, []);
 
@@ -162,8 +170,7 @@ const SchedulePage: React.FC = () => {
             <iframe
               ref={iframeRef}
               src="https://api.leadconnectorhq.com/widget/booking/Z1zXT3EvlOEu3hxLfPSP"
-              style={{ width: '100%', border: 'none', display: 'block', height: '900px' }}
-              scrolling="no"
+              style={{ width: '100%', border: 'none', display: 'block', overflow: 'hidden', height: '900px' }}
               id="Z1zXT3EvlOEu3hxLfPSP_1771387328348"
               title="Book a System Overview Call"
             ></iframe>
