@@ -43,9 +43,9 @@ const Hero: React.FC = () => {
           {/* Video Player Container */}
           <div className="p-1">
             <div className="aspect-video w-full bg-[#111827] rounded-lg md:rounded-xl relative overflow-hidden">
-              <wistia-player 
-                media-id="jlhc0a13e7" 
-                seo="false" 
+              <wistia-player
+                media-id="1oojmx1fl3"
+                seo="false"
                 aspect="1.7777777777777777"
                 style={{ width: '100%', height: '100%', display: 'block' }}
               ></wistia-player>
