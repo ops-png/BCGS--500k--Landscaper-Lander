@@ -24,6 +24,14 @@ const Hero: React.FC = () => {
         Only qualified homeowners with budget reach your phone — no tire kickers, no wasted walkthroughs, no more donating your time/money to Google. (Done-For-You)
       </p>
 
+      {/* Watch Breakdown Label */}
+      <div className="flex items-center justify-center gap-2 mb-6 md:mb-8">
+        <span className="text-[#C9A24D] text-xs md:text-sm font-black tracking-[0.25em] uppercase">Watch the breakdown below</span>
+        <svg className="w-4 h-4 text-[#C9A24D] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+
       {/* Video Section with Integrated Instruction Bar */}
       <div className="relative group mb-4 md:mb-12">
         <div className="absolute -inset-1 bg-gradient-to-r from-[#203159] via-[#C9A24D]/20 to-[#203159] rounded-2xl md:rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
