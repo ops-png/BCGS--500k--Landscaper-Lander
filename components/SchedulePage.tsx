@@ -74,22 +74,9 @@ const SchedulePage: React.FC = () => {
           </div>
 
           {/* Main headline */}
-          <h1 className="text-4xl md:text-7xl font-black tracking-tight uppercase leading-none text-white mb-2 md:mb-3">
-            Your Area Is
+          <h1 className="text-3xl md:text-6xl font-black tracking-tight uppercase leading-tight text-white mb-6 md:mb-8">
+            We're Holding Your Spot For The Next
           </h1>
-          <h1 className="text-4xl md:text-7xl font-black tracking-tight uppercase leading-none text-white mb-4 md:mb-6">
-            On Hold
-          </h1>
-
-          {/* Gold subheadline */}
-          <h2 className="text-lg md:text-2xl font-black tracking-[0.3em] uppercase text-[#C9A24D] mb-8 md:mb-10">
-            Exclusively For You
-          </h2>
-
-          {/* Holding text */}
-          <p className="text-[10px] md:text-xs font-black tracking-[0.2em] uppercase text-[#F5F7FA]/50 mb-4">
-            We're holding your spot for the next
-          </p>
 
           {/* Countdown timer */}
           <div className={`inline-flex items-center gap-3 md:gap-4 px-6 md:px-10 py-4 md:py-5 rounded-xl md:rounded-2xl mb-5 md:mb-6 ${expired ? 'bg-[#3B0D0D]' : 'bg-[#2A0A0A]'} border ${expired ? 'border-red-800/60' : 'border-red-900/40'}`}>
@@ -118,7 +105,7 @@ const SchedulePage: React.FC = () => {
           {/* Schedule CTA headline */}
           <h2 className="text-xl md:text-3xl font-black leading-tight tracking-tight text-white mb-4 md:mb-5">
             Schedule Your{' '}
-            <span className="text-[#C9A24D]">Growth Strategy Session</span>{' '}
+            <span className="text-[#C9A24D]">System Overview Call</span>{' '}
             Below To Claim Your Territory.
           </h2>
 
@@ -143,11 +130,16 @@ const SchedulePage: React.FC = () => {
 
         {/* ── CALENDAR EMBED ── */}
         <section ref={calendarRef} className="px-5 pb-10 md:pb-16 max-w-3xl mx-auto">
-          <div className="glass-card rounded-xl md:rounded-2xl border border-[#C9A24D]/20 min-h-[400px] md:min-h-[500px] flex items-center justify-center">
-            <p className="text-[#F5F7FA]/30 text-sm tracking-widest uppercase font-bold">
-              Calendar Coming Soon
-            </p>
+          <div className="glass-card rounded-xl md:rounded-2xl border border-[#C9A24D]/20 overflow-hidden">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/booking/Z1zXT3EvlOEu3hxLfPSP"
+              style={{ width: '100%', border: 'none', display: 'block', minHeight: '700px' }}
+              scrolling="no"
+              id="Z1zXT3EvlOEu3hxLfPSP_1771387328348"
+              title="Book a System Overview Call"
+            ></iframe>
           </div>
+          <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
         </section>
 
         {/* ── WHAT HAPPENS ON THIS CALL ── */}
