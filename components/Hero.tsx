@@ -14,11 +14,11 @@ const Hero: React.FC = () => {
       </h2>
 
       <h1 className="text-2xl md:text-5xl font-black leading-[1.2] mb-4 md:mb-6 tracking-tight text-white">
-        Stop Paying Google to Send You <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#F5F7FA] to-[#C9A24D] inline-block pt-1">Tire Kickers.</span> Do This Instead.
+        The Lead Channel Your Competitors <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#F5F7FA] to-[#C9A24D] inline-block pt-1">Aren't On Yet</span>
       </h1>
-      
+
       <p className="text-base md:text-2xl text-[#F5F7FA]/70 max-w-4xl mx-auto mb-10 md:mb-16 font-light leading-relaxed">
-        Only qualified homeowners with budget reach your phone — no tire kickers, no wasted walkthroughs, no more donating your time/money to Google. (Done-For-You)
+        Get qualified landscape leads at 50% the cost of Google ads - without changing any of your current marketing. Built specifically for established landscaping companies doing $500K+.
       </p>
 
       {/* Watch Breakdown Label */}
