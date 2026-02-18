@@ -9,16 +9,13 @@ const Hero: React.FC = () => {
         <div className="h-px w-16 md:w-24 bg-gradient-to-r from-transparent via-[#C9A24D]/40 to-transparent"></div>
       </div>
 
-      <h2 className="text-[#C9A24D] text-xs md:text-base font-black tracking-[0.3em] md:tracking-[0.4em] uppercase mb-3 md:mb-5 text-glow">
+      <h2 className="text-[#C9A24D] text-[9px] md:text-base font-black tracking-[0.2em] md:tracking-[0.4em] uppercase mb-3 md:mb-5 text-glow leading-tight">
         Landscapers Doing $500,000+ a Year
       </h2>
-      
+
       <h1 className="text-2xl md:text-5xl font-black leading-[1.2] mb-4 md:mb-6 tracking-tight text-white">
-        Stop Paying Google to Send You <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#F5F7FA] to-[#C9A24D] inline-block pt-1">Tire Kickers.</span> Use This Instead.
+        Stop Paying Google to Send You <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#F5F7FA] to-[#C9A24D] inline-block pt-1">Tire Kickers.</span> Do This Instead.
       </h1>
-      <p className="text-sm md:text-xl text-[#F5F7FA]/50 max-w-3xl mx-auto mb-6 md:mb-10 font-light leading-relaxed italic">
-        (The Facebook Filter System That Scaled our Landscaping Business past 6 Figures — Without a Single Google Ad)
-      </p>
       
       <p className="text-base md:text-2xl text-[#F5F7FA]/70 max-w-4xl mx-auto mb-10 md:mb-16 font-light leading-relaxed">
         Only qualified homeowners with budget reach your phone — no tire kickers, no wasted walkthroughs, no more donating your time/money to Google. (Done-For-You)

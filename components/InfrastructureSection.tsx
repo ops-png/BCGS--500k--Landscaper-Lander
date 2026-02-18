@@ -55,7 +55,7 @@ const InfrastructureSection: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl md:text-5xl font-black tracking-tight mb-3 md:mb-4 uppercase text-white">
-            What You're <span className="text-[#C9A24D]">Actually Getting</span>
+            What You're<br className="md:hidden" /> <span className="text-[#C9A24D]">Actually Getting</span>
           </h2>
           <p className="text-sm md:text-base text-[#F5F7FA]/50 max-w-xl mx-auto mt-3">The Complete Infrastructure</p>
           <div className="h-1 w-10 md:w-16 bg-[#C9A24D] mx-auto rounded-full mt-4"></div>

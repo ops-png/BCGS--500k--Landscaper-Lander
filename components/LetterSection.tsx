@@ -14,7 +14,7 @@ const LetterSection: React.FC = () => {
         {/* Headline */}
         <div className="text-center mb-16 md:mb-24">
           <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white">
-            Why Facebook Ads Work for <br className="hidden md:block" />
+            Why Facebook Ads<br className="md:hidden" /> Work for<br className="md:hidden" />{' '}
             <span className="text-[#C9A24D]">Established Landscapers</span>
           </h2>
         </div>
