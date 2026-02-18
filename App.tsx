@@ -9,6 +9,8 @@ import LetterSection from './components/LetterSection';
 import PainPointsSection from './components/PainPointsSection';
 import BookingSection from './components/BookingSection';
 import ScarcitySection from './components/ScarcitySection';
+import InfrastructureSection from './components/InfrastructureSection';
+import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import SchedulePage from './components/SchedulePage';
 
@@ -28,7 +30,8 @@ const LandingPage: React.FC = () => (
         <ProofSection />
         <LetterSection />
         <ProcessSection />
-        {/* Scarcity Section pulled up into the back half of the content flow */}
+        <InfrastructureSection />
+        <FAQSection />
         <ScarcitySection />
         <PainPointsSection />
       </main>

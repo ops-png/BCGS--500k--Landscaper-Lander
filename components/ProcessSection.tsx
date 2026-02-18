@@ -6,22 +6,22 @@ const ProcessSection: React.FC = () => {
     {
       step: '01',
       title: 'Check Your Availability',
-      desc: "Complete the 60-second form below. We only work with one landscaping company per area — we'll confirm whether your market is still open."
+      desc: "Complete the 60-second form below. We only work with one landscaping company per area. If your territory is open, you'll schedule a system overview call on the next page."
     },
     {
       step: '02',
-      title: 'Free Growth Consultation',
-      desc: "If your area qualifies, you'll book a free strategy call where we break down exactly how we'd generate qualified leads in your specific market."
+      title: 'We Build Your System (Days 1–30)',
+      desc: "We create your complete Facebook ads infrastructure for one service vertical. Creative, targeting, lead filtering, backend setup. Everything built specifically for your market. You don't touch anything."
     },
     {
       step: '03',
-      title: 'We Build and Launch Your Facebook Ads',
-      desc: "We create your full ad campaign and lead filter — targeting homeowners in your area with real budgets. Done-for-you. Ads live within 7 days."
+      title: 'We Optimize and Prove It Works (Days 31–60)',
+      desc: "We manage the system hands-on, optimize based on your market response, and show you the qualified leads coming in. This is where we dial it in and prove the ROI."
     },
     {
       step: '04',
-      title: 'Qualified Leads Hit Your Phone',
-      desc: "Homeowners who pass the budget filter start booking estimates. You focus on closing high-ticket jobs — not chasing people who were never going to buy."
+      title: 'You Choose What Happens Next',
+      desc: "After 60 days, you decide. Either keep us on for monthly management, or take the system over completely and run it yourself. No long-term contracts. Your call."
     }
   ];
 
@@ -30,11 +30,12 @@ const ProcessSection: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10 md:mb-14">
           <h2 className="text-2xl md:text-5xl font-black tracking-tight mb-3 md:mb-4 uppercase">
-            How It <span className="text-[#C9A24D]">Works</span>
+            How The <span className="text-[#C9A24D]">Build-and-Release</span> System Works
           </h2>
-          <div className="h-1 w-10 md:w-16 bg-[#C9A24D] mx-auto rounded-full"></div>
+          <p className="text-sm md:text-base text-[#F5F7FA]/50 max-w-xl mx-auto mt-3">The 60-Day Process</p>
+          <div className="h-1 w-10 md:w-16 bg-[#C9A24D] mx-auto rounded-full mt-4"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {steps.map((item, idx) => (
             <div key={idx} className="glass-card p-5 md:p-7 rounded-xl md:rounded-2xl relative overflow-hidden group hover:gold-border-glow transition-all duration-500 min-h-[180px] md:min-h-[220px]">
@@ -55,6 +56,10 @@ const ProcessSection: React.FC = () => {
             </div>
           ))}
         </div>
+
+        <p className="text-center text-sm md:text-base text-[#F5F7FA]/50 mt-8 md:mt-10 max-w-2xl mx-auto leading-relaxed">
+          Want to add more service verticals later? Once the system is proven in one vertical, we can expand into others.
+        </p>
       </div>
     </section>
   );
