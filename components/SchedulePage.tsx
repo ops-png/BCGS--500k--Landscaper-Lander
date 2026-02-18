@@ -55,16 +55,16 @@ const SchedulePage: React.FC = () => {
 
   const callItems = [
     {
-      title: 'The Math',
-      desc: "We'll calculate exactly how much ad spend you need to hit your revenue goal this season.",
+      title: 'The Strategic Fit Assessment',
+      desc: "We'll review your current marketing, analyze your market density, and determine if Facebook ads make sense as an additional lead channel for your business.",
     },
     {
-      title: 'The System',
-      desc: "We'll show you the backend of the Landscaper Growth System that scaled our business past six figures in 4 months.",
+      title: 'The Build-and-Release Model',
+      desc: "We'll walk through the exact 60-day process — what gets built in the first 30 days, how we optimize in the second 30 days, and what your options are after that.",
     },
     {
       title: 'The Territory Lock',
-      desc: "We'll check your zip code live. If it's open and we're a fit, we'll lock your territory on the call and start bringing you leads within 48 hours.",
+      desc: "We'll check your zip code live. If it's open and we're aligned on fit and expectations, we'll reserve your territory on the call and begin the build process within the week.",
     },
   ];
 
