@@ -13,6 +13,7 @@ import InfrastructureSection from './components/InfrastructureSection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import SchedulePage from './components/SchedulePage';
+import ConfirmedUpmarketPage from './components/ConfirmedUpmarketPage';
 
 const LandingPage: React.FC = () => (
   <div className="min-h-screen bg-[#171E26] text-[#F5F7FA] selection:bg-[#C9A24D] selection:text-[#1F2933] overflow-x-hidden relative">
@@ -46,6 +47,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/schedule" element={<SchedulePage />} />
+        <Route path="/confirmed-upmarket" element={<ConfirmedUpmarketPage />} />
       </Routes>
     </BrowserRouter>
   );
